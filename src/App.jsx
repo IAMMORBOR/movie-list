@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Home />}/>
       <Route exact path="/:category" element={<Category />}/>
-      <Route exact path="/movie" element={<MoviePage />}/>
+      <Route exact path="/movie/:id" element={<MoviePage />}/>
 
     </Routes>
     </BrowserRouter>
