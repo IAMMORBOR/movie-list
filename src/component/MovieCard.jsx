@@ -2,7 +2,7 @@
 export default function MovieCard({ title, date, bgImage, onClick, handleLikes}) {
   
   return (
-    <div className="w-[270px] max-w-[270px] md:w-[250px] md:max-w-[250px] h-[auto] bg-gradient-to-br from-purple-900 80%  via-[#ff2901] 10% to-pink-800 rounded-md pt-2 relative ">
+    <div className="w-[295px]  md:w-[250px] md:max-w-[250px] h-[auto] bg-gradient-to-br from-purple-900 80%  via-[#ff2901] 10% to-pink-800 rounded-md pt-2 relative ">
       <div className="absolute top-4 right-[1rem]  cursor-pointer ">
         <svg
           width="24"
