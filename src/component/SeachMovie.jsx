@@ -6,8 +6,8 @@ export default function Search({ searchData, isLoading, searchString }) {
     <div className="flex flex-col items-center mb-[1.2rem] md:mb-[4rem] mt-5">
       <div className="text-white flex w-full justify-between items-center md:px-[12rem]">
         <div className=" ">
-          <h1 className=" text-lg ">{`Result for ${searchString}`}</h1>
-          <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[18rem] h-[0.15rem] mb-3"></div>
+          <h1 className=" text-lg  capitalize ml-10 md:ml-0">{`Result for " ${searchString} "`}</h1>
+          <div className=" ml-10 md:ml-0 bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[18rem] h-[0.15rem] mb-3"></div>
         </div>
       </div>
       <div className="md:grid md:grid-cols-4 md:gap-1">
