@@ -7,3 +7,7 @@
         @apply font-Roboto;
     }
 }
+body{
+    background-color:#171717;
+    /* height: 100vh; */
+}
