@@ -1,12 +1,13 @@
 import MovieCard from "./MovieCard";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MovieCardSkelenton from "./MovieCardSkelenton";
-import Search from "./SeachMovie";
 import {
   useFetchTrendingMovies,
   useFetchPopularMovies,
   useFetchAllSeries,
 } from "../hooks/fetch";
+
 
 
 export default function MovieList() {
@@ -24,13 +25,14 @@ export default function MovieList() {
   const handleViewMovie = (id) => {
     navigate(`/movie/${id}`);
   };
+
   return (
-    <section className="bg-[#171717] h-max-content p-4 ">
-      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[4rem]">
-        <div className=" text-white flex w-full justify-between items-center md:px-[12rem]">
+    <section className="bg-[#171717] h-max-content p-4">
+      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[2rem]">
+        <div className=" text-white flex w-full justify-between items-center md:px-[8rem]">
           <div className=" ">
             <h1 className="text-lg ">What's Trending </h1>
-            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid  md:w-[18rem] h-[0.15rem] mb-3"></div>
+            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid  md:w-[14rem] h-[0.15rem] mb-3"></div>
           </div>
           <button
             className="text-sm cursor-pointer flex justify-end"
@@ -56,11 +58,11 @@ export default function MovieList() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[4rem]">
-        <div className="text-white flex w-full justify-between items-center md:px-[12rem]">
+      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[2rem]">
+        <div className="text-white flex w-full justify-between items-center md:px-[8rem]">
           <div className=" ">
             <h1 className=" text-lg ">Popular Movies?</h1>
-            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[18rem] h-[0.15rem] mb-3"></div>
+            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[14rem] h-[0.15rem] mb-3"></div>
           </div>
           <button
             className=" text-xsm md:text-sm cursor-pointer"
@@ -87,11 +89,11 @@ export default function MovieList() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[4rem]">
-        <div className="text-white flex w-full justify-between items-center md:px-[12rem]">
+      <div className="flex flex-col items-center mb-[1.2rem] md:mb-[2rem]">
+        <div className="text-white flex w-full justify-between items-center md:px-[8rem]">
           <div className=" ">
             <h1 className="text-lg ">Popular Series</h1>
-            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[18rem] h-[0.15rem] mb-3"></div>
+            <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[14rem] h-[0.15rem] mb-3"></div>
           </div>
           <button
             className="text-sm cursor-pointer"

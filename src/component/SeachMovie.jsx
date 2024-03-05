@@ -10,7 +10,7 @@ export default function Search({ searchData, isLoading, searchString }) {
           <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid md:w-[18rem] h-[0.15rem] mb-3"></div>
         </div>
       </div>
-      <div className="md:grid md:grid-cols-4 md:gap-4">
+      <div className="md:grid md:grid-cols-4 md:gap-1">
         {searchData?.map((data) => (
           <div className="mb-8 md:mb-2 md:mr-8 mt-4" key={data.id}>
             {isLoading ? (
