@@ -19,12 +19,11 @@ export default function Category() {
         {category === "trending" && (
           <div className="md:grid md:grid-cols-4 md:gap-4">
             {trending?.map((data, id) => (
-              <div className="mb-8 md:mb-2 md:mr-8 mt-4">
+              <div className="mb-8 md:mb-2 md:mr-8 mt-4"  key={data.id}>
                 {isLoading ? (
                   <MovieCardSkelenton />
                 ) : (
                   <MovieCard
-                    key={id}
                     title={data.original_name ?? data.original_title}
                     date={data?.release_date ?? data.first_air_date}
                     bgImage={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
@@ -39,12 +38,11 @@ export default function Category() {
         {category === "popular-movies" && (
           <div className="md:grid md:grid-cols-4 md:gap-4">
             {popular?.map((data, id) => (
-              <div className="mb-8 md:mb-2 md:mr-8 mt-4">
+              <div className="mb-8 md:mb-2 md:mr-8 mt-4" key={data.id}>
                 {loading ? (
                   <MovieCardSkelenton />
                 ) : (
                   <MovieCard
-                    key={id}
                     title={data.original_name ?? data.original_title}
                     date={data?.release_date ?? data.first_air_date}
                     bgImage={`https://image.tmdb.org/t/p/w500/${
@@ -60,13 +58,13 @@ export default function Category() {
       <div className="text-white flex justify-center items-center">
         {category === "series" && (
           <div className="md:grid md:grid-cols-4 md:gap-4">
-            {series?.map((data, id) => (
-              <div className="mb-8 md:mb-2 md:mr-8 mt-4">
+            {series?.map((data) => (
+              <div className="mb-8 md:mb-2 md:mr-8 mt-4"key={data.id}>
                 {loadingSeries ? (
                   <MovieCardSkelenton />
                 ) : (
                   <MovieCard
-                    key={id}
+                    
                     title={data.original_name ?? data.original_title}
                     date={data?.release_date ?? data.first_air_date}
                     bgImage={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}

@@ -9,5 +9,6 @@
 }
 body{
     background-color:#171717;
+    overflow-x: hidden;
     /* height: 100vh; */
 }

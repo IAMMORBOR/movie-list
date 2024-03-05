@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchMovie } from "../hooks/mutate";
 import Header from "./Header";
 import MovieList from "./MovieList";
@@ -16,11 +16,21 @@ export default function Home() {
       const res = await searchMovie(searchString);
       setSearchData(res);
     } catch (error) {
-        toast.error(error || "An error occured")
+      toast.error(error || "An error occured");
       console.log(error);
-      
     }
   };
+
+  // submit search function if the enter key is pressed
+  useEffect(() => {
+    const keyHandler = ({ keyCode }) => {
+      if (keyCode === 13 && searchString !== "") {
+        handleSearch();
+      }
+    };
+    document.addEventListener("keydown", keyHandler);
+    return () => document.removeEventListener("keydown", keyHandler);
+  });
 
   return (
     <>
