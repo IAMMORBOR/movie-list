@@ -43,7 +43,7 @@ export default function MovieList() {
         </div>
         <div className="md:flex">
           {trending?.slice(0, 4)?.map((data) => (
-            <div className="mb-8 md:mb-2 md:mr-8 mt-4" key={data?.id}>
+            <div className="mb-8 md:mb-2 md:mr-8 mt-4 mr-0 ml-0" key={data?.id}>
               {isLoading ? (
                 <MovieCardSkelenton />
               ) : (

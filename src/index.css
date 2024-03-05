@@ -7,6 +7,11 @@
         @apply font-Roboto;
     }
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-color:#171717;
     overflow-x: hidden;

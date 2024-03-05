@@ -1,4 +1,3 @@
-import { useState } from "react";
 import backgroundImage from "../assets/batman.jpg";
 
 
@@ -15,7 +14,7 @@ export default function Header({setSearchString, searchString, handleSearch}) {
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full h-full flex justify-center items-center backdrop-brightness-50 ">
+        <div className="w-full h-full flex justify-center items-center backdrop-brightness-[.2] ">
           <div className="text-center">
             <h1 className="text-white text-4xl text-center capitalize text-xl font-[900] mb-3">
               Welcome !
