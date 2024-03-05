@@ -1,18 +1,19 @@
 import MovieCard from "./MovieCard";
 import { useNavigate } from "react-router-dom";
 import MovieCardSkelenton from "./MovieCardSkelenton";
+import Search from "./SeachMovie";
 import {
   useFetchTrendingMovies,
   useFetchPopularMovies,
   useFetchAllSeries,
-  useGetMovieByID
 } from "../hooks/fetch";
+
 
 export default function MovieList() {
   const navigate = useNavigate();
-  const { data: trending, isLoading } = useFetchTrendingMovies();
-  const { data: popular, isLoading: loading } = useFetchPopularMovies();
-  const { data: series, isLoading: loadingSeries } = useFetchAllSeries();
+  const { data: trending, isLoading, isError} = useFetchTrendingMovies();
+  const { data: popular, isLoading: loading, isError:error } = useFetchPopularMovies();
+  const { data: series, isLoading: loadingSeries, isError:serirsError } = useFetchAllSeries();
  
 
   const handleRoute = (slug) => {
