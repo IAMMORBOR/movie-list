@@ -66,18 +66,12 @@ describe('test the movie endpoint    ', () => {
     cy.request('GET', `https://api.themoviedb.org/3/movie/${movieid}?api_key=ae8775e605fbf2b4a5eda1649df07930`)
       .then((response) => {
         expect(response.status).to.equal(200);
-        console.log("CY response", response);
-
         const movieDetails = response.body;
-        console.log("Movie details", movieDetails);
-
-        // Alias the movie details for later use
         cy.wrap(movieDetails).as('movies');
       });
 
     // Check if movie component has the necessary details.
     cy.get('@movies').then((moviedetail) => {
-      console.log("My details", moviedetail);
       expect(moviedetail?.poster_path).to.exist;
       expect(moviedetail?.tagline).to.exist;  
       expect(moviedetail?.original_title).to.exist;
