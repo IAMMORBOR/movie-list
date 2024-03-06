@@ -2,7 +2,7 @@
 export default function MovieCard({ title, date, bgImage, onClick, handleLikes}) {
   
   return (
-    <div className="w-[300px]  md:w-[250px] md:max-w-[250px] h-[auto] bg-gradient-to-br from-purple-900 80%  via-[#ff2901] 10% to-pink-800 rounded-md pt-2 relative ">
+    <div data-testid="movie-card" className="w-[300px]  md:w-[250px] md:max-w-[250px] h-[auto] bg-gradient-to-br from-purple-900 80%  via-[#ff2901] 10% to-pink-800 rounded-md pt-2 relative ">
       <div className="absolute top-4 right-[1rem]  cursor-pointer ">
         <svg
           width="24"
@@ -22,12 +22,12 @@ export default function MovieCard({ title, date, bgImage, onClick, handleLikes})
       <div className="h-[25rem] w-full">
         <img className="h-full w-full" src={bgImage} alt="" />
       </div>
-      <div
+      <div data-testid="clickable-details"
         className="py-2 px-2 text-white text-sm cursor-pointer"
         onClick={onClick ? () => onClick() : null}
       >
-        <p>{title}</p>
-        <p>{date}</p>
+        <p data-testid="title">{title}</p>
+        <p data-testid="date">{date}</p>
       </div>
     </div>
   );
