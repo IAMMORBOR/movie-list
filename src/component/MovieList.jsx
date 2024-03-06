@@ -35,6 +35,7 @@ export default function MovieList() {
             <div className="bg-gradient-to-br from-red-600 via-pink-800 to-purple-900 border-solid  md:w-[14rem] h-[0.15rem] mb-3"></div>
           </div>
           <button
+           data-testid="trending-view"
             className="text-sm cursor-pointer flex justify-end"
             onClick={() => handleRoute("trending")}
           >
